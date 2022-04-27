@@ -1,6 +1,17 @@
-const navBtn = document.getElementById('navbar-toggle');
-const menuContainer = document.querySelector('.menu-container');
+const sliderImgs = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
 
-navBtn.addEventListener('click', () => {
-  menuContainer.classList.toggle('open')
+let contador = 1;
+let intervalo = 3000;
+let width = 720;
+window.onload = () => {
+  width = sliderImgs[0].clientWidth
+}
+
+window.addEventListener('resize', () => {
+  width = sliderImgs[0].clientWidth
 })
+
+const slides = () => {
+  slider.style.transform
+}
