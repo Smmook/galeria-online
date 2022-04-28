@@ -3,6 +3,8 @@ const sliderContainer = document.querySelector('.slider-container');
 let slides = document.querySelectorAll('.slides');
 let slidesLast = slides[slides.length - 1];
 
+const automaticTimer = 5000;
+
 const btnLeft = document.querySelector('#slider-left-btn');
 const btnRight = document.querySelector('#slider-right-btn');
 
@@ -42,11 +44,11 @@ const movePrev = () => {
 
 let movement = setInterval(() => {
   moveNext();
-}, 4000);
+}, automaticTimer);
 
 const resetMovement = () => {
   clearInterval(movement);
   movement = setInterval(() => {
     moveNext();
-  }, 4000);
+  }, automaticTimer);
 }
