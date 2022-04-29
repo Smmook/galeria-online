@@ -8,6 +8,15 @@ const automaticTimer = 5000;
 const btnLeft = document.querySelector('#slider-left-btn');
 const btnRight = document.querySelector('#slider-right-btn');
 
+window.onload = () => {
+  const sliderImg = document.querySelectorAll('.slides img')[0];
+  sliderContainer.style.maxWidth = sliderImg.clientWidth;
+}
+window.addEventListener('resize', () => {
+  const sliderImg = document.querySelectorAll('.slides img')[0];
+  sliderContainer.style.maxWidth = sliderImg.clientWidth;
+});
+
 slider.insertAdjacentElement('afterbegin', slidesLast);
 
 btnRight.addEventListener('click', () => {
@@ -20,7 +29,7 @@ btnLeft.addEventListener('click', () => {
 })
 
 const moveNext = () => {
-  let slidesFirst = document.querySelectorAll('.slides')[0];
+  slidesFirst = document.querySelectorAll('.slides')[0];
   slider.style.marginLeft = '-200%';
   slider.style.transition = 'all 1s';
   setTimeout(() => {
