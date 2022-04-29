@@ -46,8 +46,8 @@ body {
 }
 
 #nav-logo img{
-  transform: scale(.5);
-  font-size: 0.5rem;
+  display: block;
+  width: 40%;
 }
 
 .navbar-item {
@@ -159,6 +159,7 @@ body {
 .slide img {
   width: 100%;
   flex: 1 0 100%;
+  object-fit: scale-down;
 }
 
 .slider-btn-container {
@@ -209,7 +210,7 @@ body {
 /* #endregion */
 
 /* #region MEDIA */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
 
   /* #region NAVBAR */
   #navbar-toggle {
