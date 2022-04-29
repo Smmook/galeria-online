@@ -1,3 +1,4 @@
+
 const slider = document.querySelector('.slider');
 const sliderContainer = document.querySelector('.slider-container');
 let slides = document.querySelectorAll('.slides');
@@ -9,8 +10,13 @@ const btnLeft = document.querySelector('#slider-left-btn');
 const btnRight = document.querySelector('#slider-right-btn');
 
 window.onload = () => {
-  const sliderImg = document.querySelectorAll('.slides img')[0];
-  sliderContainer.style.maxWidth = sliderImg.clientWidth;
+
+  /*const sliderImg = document.querySelectorAll('.slides img')[0];
+  sliderContainer.style.maxWidth = sliderImg.clientWidth;*/
+  if (window.devicePixelRatio !== 1) {
+    const factor = 1/window.devicePixelRatio;
+    sliderContainer.style.transform = 'scale(' + factor + ')';
+  }
 }
 window.addEventListener('resize', () => {
   const sliderImg = document.querySelectorAll('.slides img')[0];
