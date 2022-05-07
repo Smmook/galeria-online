@@ -1,69 +1,90 @@
+const slide = document.querySelector('.slide');
+const slideImgs = document.querySelectorAll('.slide img');
+const sliderDots = document.querySelectorAll('.slider-dots button');
+let slideIndex = 1;
+let isMoving = false;
 
-const slider = document.querySelector('.slider');
-const sliderContainer = document.querySelector('.slider-container');
-let slides = document.querySelectorAll('.slides');
-let slidesLast = slides[slides.length - 1];
+slide.insertAdjacentElement('afterbegin', slideImgs[slideImgs.length - 1].cloneNode(true));
+slide.insertAdjacentElement('beforeend', slideImgs[0].cloneNode(true));
 
-const automaticTimer = 5000;
-
-const btnLeft = document.querySelector('#slider-left-btn');
-const btnRight = document.querySelector('#slider-right-btn');
-
-window.onload = () => {
-
-  /*const sliderImg = document.querySelectorAll('.slides img')[0];
-  sliderContainer.style.maxWidth = sliderImg.clientWidth;*/
-  if (window.devicePixelRatio !== 1) {
-    const factor = 1/window.devicePixelRatio;
-    sliderContainer.style.transform = 'scale(' + factor + ')';
-  }
+const handleDots = () => {
+  document.querySelector('.slider-dots button.active').classList.remove('active');
+  sliderDots[slideIndex - 1].classList.add('active');
 }
+
+const moveSlides = () => {
+  slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+const moveHandler = (direction) => {
+  slide.style.transition = 'transform .8s ease-in-out';
+  isMoving = true;
+  if (direction === 'right') {
+    slideIndex++;
+  } else {
+    slideIndex--;
+  }
+  moveSlides();
+}
+
+const resetSliderAuto = () => {
+  clearInterval(sliderAuto);
+  sliderAuto = setInterval(() => {
+    moveHandler('right');
+  }, 3500);
+}
+
+window.onload = () => moveSlides();
+
+let sliderAuto = setInterval(() => {
+  moveHandler('right');
+}, 3500);
+
 window.addEventListener('resize', () => {
-  const sliderImg = document.querySelectorAll('.slides img')[0];
-  sliderContainer.style.maxWidth = sliderImg.clientWidth;
+  const someSliderImg = slide.querySelectorAll('img')[0];
+  document.querySelector('.slider').style.maxWidth = someSliderImg.clientWidth;
+})
+
+document.querySelector('.slider-btn-left').addEventListener('click', () => {
+  if (isMoving) return;
+  resetSliderAuto();
+  moveHandler('left');
+  
 });
 
-slider.insertAdjacentElement('afterbegin', slidesLast);
+document.querySelector('.slider-btn-right').addEventListener('click', () => {
+  if (isMoving) return;
+  resetSliderAuto();
+  moveHandler('right');
+});
 
-btnRight.addEventListener('click', () => {
-  moveNext();
-  resetMovement();
+slide.addEventListener('transitionend', () => {
+  isMoving = false;
+  const slidesArray = slide.querySelectorAll('img');
+  if (slideIndex === 0) {
+    slide.style.transition = 'none';
+    slideIndex = slidesArray.length - 2;
+    moveSlides();
+  } else if (slideIndex === slidesArray.length - 1) {
+    slide.style.transition = 'none';
+    slideIndex = 1;
+    moveSlides();
+  }
+  handleDots();
 })
-btnLeft.addEventListener('click', () => {
-  movePrev();
-  resetMovement();
+
+sliderDots.forEach(dot => {
+  dot.addEventListener('click', e => {
+    if (isMoving) {
+      setTimeout(() => {
+        isMoving = false;
+      }, 800);
+      return;
+    }
+    slide.style.transition = 'transform .8s ease-in-out';
+    slideIndex = e.target.id;
+    isMoving = true;
+    handleDots();
+    moveSlides();
+  })
 })
-
-const moveNext = () => {
-  slidesFirst = document.querySelectorAll('.slides')[0];
-  slider.style.marginLeft = '-200%';
-  slider.style.transition = 'all 1s';
-  setTimeout(() => {
-    slider.style.transition = 'none';
-    slider.insertAdjacentElement('beforeend', slidesFirst);
-    slider.style.marginLeft = "-100%"
-  }, 1000);
-}
-
-const movePrev = () => {
-  slides = document.querySelectorAll('.slides');
-  slidesLast = slides[slides.length - 1];
-  slider.style.marginLeft = '0%';
-  slider.style.transition = 'all 1s';
-  setTimeout(() => {
-    slider.style.transition = 'none';
-    slider.insertAdjacentElement('afterbegin', slidesLast);
-    slider.style.marginLeft = "-100%"
-  }, 1000);
-}
-
-let movement = setInterval(() => {
-  moveNext();
-}, automaticTimer);
-
-const resetMovement = () => {
-  clearInterval(movement);
-  movement = setInterval(() => {
-    moveNext();
-  }, automaticTimer);
-}
