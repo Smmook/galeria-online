@@ -36,8 +36,23 @@
     </div>
   </nav>
   <main>
-    <section id="" class="">
+    <section class="formulario">
+      <form name="frmContacto" method="post" action="script.php">
 
+        <label for="first_name"></label>
+        <input type="text" name="first_name" maxlength="50" size="25" placeholder="Nombre*">
+
+        <label for="email"></label>
+        <input type="text" name="email" maxlength="80" size="35" placeholder="E-mail*">
+
+        <label for="telephone"></label>
+        <input type="text" name="telephone" maxlength="25" size="15" placeholder="Teléfono">
+
+        <label for="comments"></label>
+        <textarea name="comments" maxlength="3000" cols="30" rows="10"></textarea>
+
+        <input type="submit" class="button" value="Enviar">
+        </form>
     </section>
   </main>
   <script src="nav.js"></script>
