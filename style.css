@@ -312,6 +312,12 @@ body {
   color: #000;
 }
 
+.formulario form input[type=tel] {
+  width: 100%;
+  font-size: 16px;
+  color: #000;
+}
+
 .formulario form .input-container {
   position: relative;
   margin-bottom: 1rem;
@@ -325,7 +331,7 @@ body {
   transform: translateY(-50%);
 }
 
-
+/* #endregion */
 
 /* #region FAQ */
   ul {
@@ -360,14 +366,14 @@ body {
     color: antiquewhite;
     transition: .4s;
     cursor: pointer;
-  } */
+  } 
 
 /* #endregion */
 
 
 /* #region SLIDER */
 
-.container {
+.slider-container {
   display: grid;
   place-items: center;
   align-content: center;
