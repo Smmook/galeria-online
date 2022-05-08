@@ -16,9 +16,6 @@ body {
 /* #region NAVBAR */
 .navbar {
   position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: 8vh;
   top: 0;
@@ -26,6 +23,7 @@ body {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   padding: 1.2rem 0;
   background-color: #fff;
+  overflow: hidden;
 }
 
 
@@ -35,6 +33,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  height: 100%;
 }
 
 .navbar-list {
@@ -46,7 +45,6 @@ body {
 }
 
 #nav-logo img{
-
   display: inline;
   width: 40%;
   max-height: 100%;
@@ -56,7 +54,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
   margin: 0 2rem;
   cursor: pointer;
 }
@@ -66,9 +63,11 @@ body {
 }
 
 .navbar-item a {
+  flex-wrap: wrap;
   text-decoration: none;
   color: black;
   max-height: 100%;
+  padding: 1rem 0;
 }
 
 .navbar-item:hover a {
@@ -181,24 +180,26 @@ body {
     justify-content: space-around;
   }
 
-  .button{
+  .formulario form input.submit-btn{
     background-color: black;
     color: white;
     border: 2px solid transparent;
     border-color: antiquewhite;
-    text-decoration: none;
     padding: 10px 20px;
+    text-align: center;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
+    width: 25%;
+    transition: .4s ease-in;
     }
 
-    .button:hover{
+    .formulario form input.submit-btn:hover{
       transform: scale(1.2);
       background-color: transparent;
       border: 2px solid antiquewhite;
       color: black;
-      transition: .4s;
+      transition: .4s ease-out;
       cursor: pointer;
     }
 
@@ -248,35 +249,33 @@ body {
     text-align: center;
   }
 
-  label, textarea {
+  .formulario label, .formulario textarea {
     display: block;
-    text-align: center;
     margin: 5px;
     margin-top: 15px;
 
   }
   
-  textarea {
-    resize: none;
-    width: 1000px;
-    height: 400px;
-    display: flex;
-    text-align: center;
-    align-items: center;
+  .formulario textarea {
     margin-top: 40px;
     margin-bottom: 20px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    resize: none;
+    text-align: start;
+    padding: 1rem;
+    outline: none;
+    width: 100%;
   }
 
-  input[type=text] { 
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+  .formulario textarea:focus {
+    border: 2px solid lightseagreen;
+  }
+
+  .formulario input[type=text] { 
     font-size: 16px;
     color: #000;
     width: 100%;
-}
+  }
 
   ::-webkit-input-placeholder {
     text-align: center;
@@ -287,6 +286,45 @@ body {
    
   }
 /* #endregion */
+
+/* #region CONTACTO */
+
+.formulario form {
+  width: 50rem;
+  max-width: 80%;
+}
+
+.formulario form input {
+  padding: .5rem;
+  padding-left: 3rem;
+  text-align: start;
+  width: 100%;
+  outline: none;
+}
+
+.input-container input:focus {
+  border: 2px solid lightseagreen;
+}
+
+.formulario form input[type=email] {
+  width: 100%;
+  font-size: 16px;
+  color: #000;
+}
+
+.formulario form .input-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-container i {
+  position: absolute;
+  min-width: 40px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 
 /* #region FAQ */
