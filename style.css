@@ -217,27 +217,58 @@ body {
 /* #region GALERY */
   .galery{
     width: 90%;
-    padding: 0px;
     margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 
-  .cuadros img{
-    padding: 10px;
+  .cuadro {
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid red; */
+  }
+
+  .cuadro img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+    transition: filter .5s;
   }
 
-  .cuadros{
-    width: 33.33%;
+  .cuadro .text-content {
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .cuadro .text-content span {
     text-align: center;
   }
 
-.formulario{
+  .cuadro:hover .text-content {
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
+  .cuadro:hover img {
+    filter: blur(1.5px);
+    transition: .5s;
+  }
+
+  .formulario{
     width: 1280px;
     max-width: 100%;
     margin: 0 auto;
