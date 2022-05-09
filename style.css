@@ -17,7 +17,7 @@ body {
 .navbar {
   position: sticky;
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   top: 0;
   z-index: 10;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -59,7 +59,7 @@ body {
 }
 
 .navbar-item:hover {
-  border-bottom: 4px solid antiquewhite;
+  border-bottom: 4px solid #B70E21;
 }
 
 .navbar-item a {
@@ -71,7 +71,7 @@ body {
 }
 
 .navbar-item:hover a {
-  color: antiquewhite;
+  color: #B70E21;
   transition: .1s ease-in-out;
   transform: scale(1.05);
 }
@@ -137,7 +137,7 @@ body {
 
   .about{
     width: 100%;
-    height: 100vh;
+    height: 84vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,6 +149,7 @@ body {
     width: 550px;
     max-width: 100%;
     margin: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
 
   .bio{
@@ -168,6 +169,7 @@ body {
   .bio h5{
     font-size: 20px;
     text-align: center;
+    color: #B70E21;
   }
 
   .content{
@@ -184,7 +186,7 @@ body {
     background-color: black;
     color: white;
     border: 2px solid transparent;
-    border-color: antiquewhite;
+    border-color: #B70E21;
     padding: 10px 20px;
     text-align: center;
     border-radius: 30px;
@@ -197,10 +199,11 @@ body {
     .formulario form input.submit-btn:hover{
       transform: scale(1.2);
       background-color: transparent;
-      border: 2px solid antiquewhite;
-      color: black;
+      border: 2px solid #B70E21;
+      color: white;
       transition: .4s ease-out;
       cursor: pointer;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
 
   @media screen and (max-width: 1180px){
@@ -211,10 +214,11 @@ body {
      }
   }
 
-
 /* #endregion */
 
+
 /* #region GALERY */
+
   .galery{
     width: 90%;
     margin: 50px auto;
@@ -258,17 +262,115 @@ body {
     text-align: center;
   }
 
-  .cuadro:hover .text-content {
-    opacity: 1;
-    transition: opacity .5s;
-  }
+  /* #endregion */
 
-  .cuadro:hover img {
-    filter: blur(1.5px);
-    transition: .5s;
-  }
 
-  .formulario{
+/* #region CONTACTO */
+
+.formulario{
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 1.5em;
+
+}
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.contact-form {
+  background: white;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+  display: block;
+}
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form .block {
+  grid-column: 1 / 3;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: .7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: black;
+  border-bottom: 1px solid #B70E21;
+}
+
+
+.submit-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+  border-color: #B70E21;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.submit-btn:hover{
+  transform: scale(1.2);
+  background-color: #B70E21;
+  border: 2px solid #B70E21;
+  color: white;
+  transition: .4s;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+
+/* CONTACT INFO */
+ /*.contact-info {
+ background: #B70E21;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}*/
+
+.contact-info h4, .contact-info ul, .contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+  body {
+      padding: 0;
+  }
+  .contact-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+      padding: 2em;
+  }
+}
+
+/* #endregion */
+
+/*
     width: 1280px;
     max-width: 100%;
     margin: 0 auto;
@@ -316,6 +418,7 @@ body {
     padding: 10px;
    
   }
+
 /* #endregion */
 
 /* #region CONTACTO */
@@ -365,6 +468,81 @@ body {
 /* #endregion */
 
 /* #region FAQ */
+.otrosproyectos{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-decoration: underline 4px;
+  text-decoration-color: rgba(0, 255, 255, 0.504);
+}
+
+.questions-container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.question{
+  border-bottom: 1px solid lightgray;
+}
+
+.question span{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.question button{
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 20px 15px;
+  border:none;
+  outline: none;
+  font-size: 22px;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+.question p{
+  font-size: 22px;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+.d-arrow{
+  transition: transform 0.4s ease-in ;
+  color: 000;
+}
+
+.question p.show{
+  max-height: 200px; 
+  opacity: 1;
+  padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+  transform: rotate(180deg);
+}
+
+/* #endregion */
+
+
+/* #region FAQ2 
   ul {
     list-style: none;
   }
@@ -394,12 +572,12 @@ body {
     .faqIndex a:hover{
     transform: scale(1.2);
     background-color: transparent;
-    color: antiquewhite;
+    color: #B70E21;
     transition: .4s;
     cursor: pointer;
   } 
 
-/* #endregion */
+ #endregion */
 
 
 /* #region SLIDER */
@@ -512,10 +690,12 @@ body {
 }
 /* #endregion */
 
+
 /* #region MEDIA */
 @media (max-width: 1200px) {
 
   /* #region NAVBAR */
+
   #navbar-toggle {
     display: flex;
   }
@@ -535,7 +715,11 @@ body {
   .navbar-item {
     margin: 0;
     padding-left: 0;
-  }
+  }  
+  
+  /*a.navbar-link {
+  color: white;
+  }*/ 
 
   .navbar-item:hover {
     border-bottom: none;
@@ -564,6 +748,24 @@ body {
 
   /* #endregion */
 }
+
+/* #region FOOTER */
+
+footer {
+  align-self: flex-end;
+  background-color: rgba(40, 207, 215, 0.3);
+  color: black;
+  text-shadow: white;
+  line-height: 3;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+}
+
+/* #endregion */
 /* #endregion */
 
 
