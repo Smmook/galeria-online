@@ -260,6 +260,16 @@ body {
     text-align: center;
   }
 
+  .cuadro:hover .text-content {
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
+  .cuadro:hover img {
+    filter: blur(1.5px);
+    transition: .5s;
+  }
+
   /* #endregion */
 
 
