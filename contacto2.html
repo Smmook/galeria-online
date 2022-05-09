@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>humhemhome | Sobre mí</title>
+  <title>humhemhome | Contacto</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,6 @@
           <span class="bar"></span>
         </div>
         <ul class="navbar-list">
-          <li class="navbar-item">
           <li class="navbar-item">
             <a href="galeria.html" class="navbar-link">Galería</a>
           </li>
@@ -37,26 +36,25 @@
     </div>
   </nav>
   <main>
-    <section class="about">
-      <div class="content">
-        <img src="img/profile.jpg"> 
-        <div class="bio">
-          <h1>Adrián C.B.</h1>
-          <h5>UX / UI DESIGNER</h5>
-            <p><br>Ahora escucha la historia de mi vida y de cómo el destino cambió mi movida: sin comerlo ni beberlo llegué a ser el chuleta de un barrio llamado Bel Air.</p>
-            <p>Jugaba al basket sin cansarme demasiado porque por las noches me sacaba el graduado.
-            Cierto día jugando al basket con amigos unos tipos del barrio me metieron en un lío y mi madre me decía una y otra vez ¡con tu tío y con tu tía irás a Bel Air!</p><br>
-            <p>Llamé a un taxi, cuando se acercó su molonga matrícula me fascinó quería conocer a la clase de parientes que me espera en Bel Air con aire sonriente.</p>
-            <p>las siete llegué a aquella casa y salí de aquel taxi que olía a cuadra estaba en Bel Air y la cosa cambiaba mi trono me esperaba, ¡el príncipe llegaba!</p><br>
+    <section class="formulario">
+      <form name="frmContacto" action="https://formsubmit.co/sergiomataherrero@gmail.com" method="post">
 
-            <a href="https://www.linkedin.com/in/adriancrespowo/" target="_blank"><button type="button" class="button">LinkedIn</button></a>
-        </div>
-      </div>
+        <label for="nombre"></label>
+        <input type="text" name="nombre" maxlength="50" size="25" placeholder="Nombre*" required>
+
+        <label for="email"></label>
+        <input type="text" name="email" maxlength="80" size="35" placeholder="E-mail*" required>
+
+        <label for="telefono"></label>
+        <input type="text" name="telefono" maxlength="25" size="15" placeholder="Teléfono">
+
+        <label for="comments*"></label>
+        <textarea name="comments" maxlength="3000" cols="30" rows="10" required></textarea>
+
+        <input type="submit" class="button" value="Enviar">
+        </form>
     </section>
   </main>
-  <footer>
-    Derechos Reservados | Don Hum Tenorio &copy
-  </footer>
   <script src="nav.js"></script>
 </body>
 </html>
