@@ -37,32 +37,39 @@
     </div>
   </nav>
   <main>
-    <div class="slider-flex-container">
-      <div class="slider-container">
-        <div class="slider">
-          <div class="slides">
-            <img src="img/index1.jpg" alt="">
-          </div>
-          <div class="slides">
-            <img src="img/index2.png" alt="">
-          </div>
-          <div class="slides">
-            <img src="img/index3.png" alt="">
-          </div>
-          <div class="slides">
-            <img src="img/index4.png" alt="">
-          </div>
+    <section class="slider-container">
+      <div class="slider">
+        <div class="slider-progress"></div>
+        <div class="slider-btn-container">
+          <button class="slider-btn slider-btn-left">
+            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+            <span>&lt;</span>
+          </button>
+          <button class="slider-btn slider-btn-right">
+            <!-- <i class="fa-solid fa-chevron-right"></i> -->
+            <span>&gt;</span>
+          </button>
         </div>
-        <i id="slider-left-btn" class="fa-solid fa-angle-left"></i>
-        <i id="slider-right-btn" class="fa-solid fa-angle-right"></i>
+        <div class="slide">
+          <img src="img/1.jpg" alt="">
+          <img src="img/2.jpg" alt="">
+          <img src="img/3.jpg" alt="">
+          <img src="img/4.jpg" alt="">
+        </div>
+        <div class="slider-dots">
+          <button id="1" class="active"></button>
+          <button id="2"></button>
+          <button id="3"></button>
+          <button id="4"></button>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
   <footer>
     Derechos Reservados | Don Hum Tenorio &copy
   </footer>
 
-  <script src="nav.js"></script>
-  <script src="slider.js"></script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/slider.js"></script>
 </body>
 </html>
