@@ -11,9 +11,7 @@
 <body>
   <nav class="navbar">
     <div class="navbar-container">
-      <!-- <div id="nav-logo"> -->
-        <a id="nav-logo" href="index.html"><img src="img/logo-ref.png"></a>
-      <!-- </div> -->
+      <div id="nav-logo"><a href="index.html"><img src="img/logo-ref.svg" onmouseover="this.src='img/logocolor.png'" onmouseout="this.src='img/logo-ref.svg'"></a></div>
       <div class="menu-container">
         <div id="navbar-toggle">
           <span class="bar"></span>
@@ -39,37 +37,40 @@
     </div>
   </nav>
   <main>
-
-    <div class="container">
-      <div class="slider">
-        <div class="slider-progress"></div>
-        <div class="slider-btn-container">
-          <button class="slider-btn slider-btn-left">
-            <!-- <i class="fa-solid fa-chevron-left"></i> -->
-            <span>&lt;</span>
-          </button>
-          <button class="slider-btn slider-btn-right">
-            <!-- <i class="fa-solid fa-chevron-right"></i> -->
-            <span>&gt;</span>
-          </button>
-        </div>
-        <div class="slide">
-          <img src="img/1.jpg" alt="">
-          <img src="img/2.jpg" alt="">
-          <img src="img/3.jpg" alt="">
-          <img src="img/4.jpg" alt="">
-        </div>
-        <div class="slider-dots">
-          <button id="1" class="active"></button>
-          <button id="2"></button>
-          <button id="3"></button>
-          <button id="4"></button>
+    <section class="slider-center">
+      <div class="slider-container slider-big">
+        <div class="slider">
+          <div class="slider-progress"></div>
+          <div class="slider-btn-container">
+            <button class="slider-btn slider-btn-left">
+              <!-- <i class="fa-solid fa-chevron-left"></i> -->
+              <span>&lt;</span>
+            </button>
+            <button class="slider-btn slider-btn-right">
+              <!-- <i class="fa-solid fa-chevron-right"></i> -->
+              <span>&gt;</span>
+            </button>
+          </div>
+          <div class="slide">
+            <img src="img/index1.jpg" alt="">
+            <img src="img/index2.png" alt="">
+            <img src="img/index3.png" alt="">
+            <img src="img/index4.png" alt="">
+          <div class="slider-dots">
+            <button id="1" class="active"></button>
+            <button id="2"></button>
+            <button id="3"></button>
+            <button id="4"></button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
+  <footer>
+    Derechos Reservados | Don Hum Tenorio &copy
+  </footer>
 
-  <script src="nav.js"></script>
-  <script src="slider.js"></script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/slider.js"></script>
 </body>
 </html>
