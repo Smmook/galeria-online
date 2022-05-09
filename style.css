@@ -442,7 +442,7 @@ ul {
   margin-top: 80px;
   margin-bottom: 40px;
   text-decoration: underline 4px;
-  text-decoration-color: #B70E21;
+  text-decoration-color: rgba(0, 255, 255, 0.504);
 }
 
 .questions-container{
@@ -667,8 +667,9 @@ ul {
 
 footer {
   align-self: flex-end;
-  background-color: rgba(183, 14, 33, 0.7);
-  color: white;
+  background-color: rgba(40, 207, 215, 0.3);
+  color: black;
+  text-shadow: white;
   line-height: 3;
   font-size: 15px;
   text-align: center;
