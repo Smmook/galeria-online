@@ -712,6 +712,11 @@ color: #B70E21;
     justify-content: start;
   }
 
+  #navbar-active{
+    color: #fff;
+    font-weight: bolder;
+  }
+
   /* #endregion */
 }
 
