@@ -11,17 +11,17 @@
 <body>
   <nav class="navbar">
     <div class="navbar-container">
-      <div id="nav-logo"><a href="index.html"><img src="img/logo-ref.svg" onmouseover="this.src='img/logocolor.png'" onmouseout="this.src='img/logo-ref.svg'"></a></div>
+      <div id="nav-logo"><a href="portada.html"><img src="img/logo-ref.svg" onmouseover="this.src='img/logocolor.png'" onmouseout="this.src='img/logo-ref.svg'"></a></div>
       <div class="menu-container">
         <div id="navbar-toggle">
           <span class="bar"></span>
         </div>
         <ul class="navbar-list">
           <li class="navbar-item">
-            <a href="galeria.html" class="navbar-link">Galería</a>
-          </li>
-          <li class="navbar-item">
             <a href="sobremi.html" class="navbar-link">Sobre mí</a>
+          </li>          
+          <li class="navbar-item">
+            <a href="galeria.html" class="navbar-link">Galería</a>
           </li>
           <li class="navbar-item">
             <a href="otrosproyectos.html" class="navbar-link">Otros proyectos</a>
@@ -30,7 +30,7 @@
             <a href="faq.html" class="navbar-link">FAQ</a>
           </li>
           <li class="navbar-item">
-            <a href="contacto.html" class="navbar-link">Contacto</a>
+            <a href="contacto.html" id="navbar-active" class="navbar-link">Contacto</a>
           </li>
         </ul>
       </div>
@@ -52,12 +52,12 @@
           <i class="fa-solid fa-phone"></i>
         </div>
         <div class="input-container">
-          <input type="text" name="name" placeholder="C. Postal" >
+          <input type="text" name="city" placeholder="C. Postal" >
           <i class="fa-solid fa-location-dot"></i>
         </div>
       </div>
       <div class="img-flex">
-        <img src="img/index4.png" alt="">
+        <img src="img/sello.svg" alt="">
       </div>
       <textarea name="message" id="" cols="30" rows="10" class="form-message"></textarea>
       <button class="btn-primary form-btn">Contactar</button>

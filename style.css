@@ -47,8 +47,8 @@ body {
 
 #nav-logo img{
   display: inline;
-  width: 40%;
-  max-height: 100%;
+  width: 25%;
+  max-height: 40%;
 }
 
 .navbar-item {
@@ -75,6 +75,10 @@ body {
   color: #B70E21;
   transition: .1s ease-in-out;
   transform: scale(1.05);
+}
+
+#navbar-active{
+  color: #B70E21;
 }
 
 /* Menu movil */
@@ -143,20 +147,13 @@ body {
     min-height: 92vh;
   }
 
-  @media (max-width: 550px) {
-    .about {
-      padding-top: 0 !important;
-      justify-content: starts;
-    }
-  }
-
   .about .about-content img {
     height: auto;
     width: 550px;
     max-width: 100%;
     margin: 15px;
     margin-top: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
   }
 
   .bio{
@@ -217,6 +214,17 @@ body {
        height: auto;
        padding: 70px 0px;
      }
+  }
+
+  @media (max-width: 550px) {
+    .about {
+      padding-top: 0 !important;
+      justify-content: starts;
+    }
+
+    .about .about-content img {
+    border-radius: inherit;
+  }
   }
 
 /* #endregion */
@@ -422,7 +430,7 @@ body {
 }
 
 .img-flex img {
-  width: 100%;
+  width: 90%;
   object-fit: cover;
 }
 
@@ -434,6 +442,7 @@ body {
 
   .img-flex {
     height: 20vh;
+    content: url(img/mediaform.svg);
   }
 
   .input-container {
@@ -446,17 +455,20 @@ body {
 /* #region FAQ */
 
   .faq-title{
-  font-size: 50px;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
   margin-top: 80px;
   margin-bottom: 40px;
   text-decoration: underline 4px;
-  text-decoration-color: rgba(0, 255, 255, 0.504);
+  text-decoration-color: #B70E21;
 }
 
+.question i{
+color: #B70E21;
+}
+
+
 .questions-container{
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -465,7 +477,7 @@ body {
 }
 
 .question span{
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
 }
@@ -486,13 +498,13 @@ body {
   cursor: pointer;
 }
 .question p{
-  font-size: 22px;
+  font-size: 18px;
   max-height: 0;
   opacity: 0;
   line-height: 1.5;
   overflow: hidden;
   transition: all 0.4s ease;
-  text-align: center;
+  text-align: left;
 }
 .d-arrow{
   transition: transform 0.4s ease-in ;
@@ -707,7 +719,7 @@ body {
 
 footer {
   background-color: rgb(255, 255, 255);
-  color: black;
+  color: lightgrey;
   line-height: 3rem;
   font-size: 15px;
   text-align: center;
